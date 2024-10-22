@@ -11,7 +11,7 @@
 
 // # Recupero Elementi
 const lampImg = document.getElementById("lamp-img");
-const lampOnBtn = document.getElementById("lamp-btn");
+const lampBtnOnOff = document.getElementById("lamp-btn");
 
 let isOnButton = false;
 
@@ -20,18 +20,16 @@ const lampOnOffSwitch = () => {
   if (!isOnButton) {
     lampImg.src = "./img/yellow_lamp.png";
     lampImg.alt = "lamp-on";
-    lampOnBtn.innerHTML = "Spegni";
+    lampBtnOnOff.innerHTML = "Spegni";
     isOnButton = true;
   } else {
     lampImg.src = "./img/white_lamp.png";
     lampImg.alt = "lamp-off";
-    lampOnBtn.innerHTML = "Accendi";
+    lampBtnOnOff.innerHTML = "Accendi";
     isOnButton = false;
   }
 };
 
-lampOnBtn.addEventListener("click", lampOnOffSwitch);
+lampBtnOnOff.addEventListener("click", lampOnOffSwitch);
 
-// debug log
-console.log(lampImg);
-console.log(lampOnBtn);
+
