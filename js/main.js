@@ -11,20 +11,27 @@
 
 // # Recupero Elementi
 const lampImg = document.getElementById("lamp-img");
-const lampBtnOnOff = document.getElementById("lamp-btn");
+const lampOnBtn = document.getElementById("lamp-btn");
+
+let isOnButton = false;
 
 // # Dichiaro Funzione
-// const lampOnOffSwitch = () => {};
+const lampOnOffSwitch = () => {
+  if (!isOnButton) {
+    lampImg.src = "./img/yellow_lamp.png";
+    lampImg.alt = "lamp-on";
+    lampOnBtn.innerHTML = "Spegni";
+    isOnButton = true;
+  } else {
+    lampImg.src = "./img/white_lamp.png";
+    lampImg.alt = "lamp-off";
+    lampOnBtn.innerHTML = "Accendi";
+    isOnButton = false;
+  }
+};
 
-lampBtnOnOff.addEventListener("click", () => {
-  const srcLamp = (lampImg.src = "./img/yellow_lamp.png");
-  const imgAlt = (lampImg.alt = "lamp-on");
-
-  // debug log
-  console.log(srcLamp);
-  console.log(imgAlt);
-});
+lampOnBtn.addEventListener("click", lampOnOffSwitch);
 
 // debug log
 console.log(lampImg);
-console.log(lampBtnOnOff);
+console.log(lampOnBtn);
