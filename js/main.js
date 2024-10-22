@@ -14,9 +14,16 @@ const lampImg = document.getElementById("lamp-img");
 const lampBtnOnOff = document.getElementById("lamp-btn");
 
 // # Dichiaro Funzione
-const lampOnOffSwitch = () => {};
+// const lampOnOffSwitch = () => {};
 
-lampBtnOnOff.addEventListener("click", () => {});
+lampBtnOnOff.addEventListener("click", () => {
+  const srcLamp = (lampImg.src = "./img/yellow_lamp.png");
+  const imgAlt = (lampImg.alt = "lamp-on");
+
+  // debug log
+  console.log(srcLamp);
+  console.log(imgAlt);
+});
 
 // debug log
 console.log(lampImg);
